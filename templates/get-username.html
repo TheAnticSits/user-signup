@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signup</title>
+        <style>
+        
+        h2.signup {
+            color : blue;
+        }
+        body {
+            color : purple;
+            background-color : lavender;
+        }
+        input {
+            color : teal;            
+        }
+        div {
+            margin-left : 15px;                
+        }
+        input {
+            color : steelblue;
+            display: inline-block;
+            float: left;
+        }
+        ins.error {
+            color : red;
+            text-decoration: none;
+        }
+        label {
+            display : table-cell;
+        }
+        label{
+        display: inline-block;
+        float: left;
+        clear: left;
+        width: 125px;
+        text-align: left;
+        }
+        
+        </style>
+    </head>
+
+
+    <body>
+
+    <form action="/checkname" method="POST">
+    <h2 class= 'signup'>Signup</h2>
+    
+            
+        <label>
+            Username</label>
+            <input id="username" type="text" name="username" value="{{username}}"/><ins class = "error">{{nameerror}}</ins>
+            <br>
+
+        <label>
+            Password</label>
+            <input id="password" type="password" name="password"/><ins class = "error">{{passerror}}</ins>
+            <br>
+        <label>
+            Verify Password</label>
+            <input id="verify" type="password" name="verify"/><ins class = "error">{{matcherror}}</ins>
+            <br>
+        
+        <label>
+            Email(optional)</label>
+            <input id="email" type="text" name="email" value="{{email}}"/><ins class = "error">{{email_error}}</ins>
+        <label></label>
+        <input type="submit" value="Submit Query"/>
+        
+
+    </form>
+    </body>
+
+</html>
