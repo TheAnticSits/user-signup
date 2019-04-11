@@ -35,6 +35,10 @@ def error():
      
      if (len(original) > 20) or (len(original) <3):
           passerror = "Please enter a Password between 3 to 20 characters."
+
+     for char in original:
+          if char == " ":
+               passerror = "Password cannot contain spaces."
           
 
      email = request.form['email']
